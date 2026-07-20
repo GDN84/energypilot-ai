@@ -2,15 +2,18 @@ from fastapi import FastAPI, File, UploadFile
 import pdfplumber
 from io import BytesIO
 
-app = FastAPI(title="EnergyPilot API", version="0.1")
+app = FastAPI(
+    title="Document Intelligence API",
+    version="1.0"
+)
 
 
 @app.get("/")
 def read_root():
     return {
-        "application": "EnergyPilot API",
+        "application": "Document Intelligence API",
         "status": "running",
-        "version": "0.1",
+        "version": "1.0"
     }
 
 
